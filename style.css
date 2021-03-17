@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+    body, h3,h4, h5,h6 {
+        font-family: "Montserrat", sans-serif;
+        color: white;
+        text-align: center;
+    }
+
+    .km-black{
+        background-color: black;
+        margin: auto;
+    }
+
+    .km-header{
+        background-image: url("images/katia-sem-rugas.JPG");
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-attachment: scroll;
+        height: 645px;
+    }
+
+   #btn_scroll_down{ /*deixa o btn transparente*/
+        background-color: Transparent;
+        background-repeat:no-repeat;
+        border: none;
+        cursor:pointer;
+        outline:none;
+   }
+
+    .scroll_down:before { /*triangulo no backgroud das fotos*/
+        width: 100%;
+        display: inline-block;
+        content: '';
+        height: 46px;
+        background: rgba(0, 0, 0, 0.055);
+        background-image: url('images/scroll_down.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+
+
+    .scroll_down_p{ /*triangulo no backgroud das fotos*/
+        margin-top: -73px;
+        margin-bottom: 68px;
+        color:rgba(255, 255, 255, 0.295);
+        top: 10px;
+       
+    }
+
+    figure{
+        margin:unset;
+    }
+
+    /*Formatacao de imagens com legendas*/
+    figure.foto-legenda{
+        position: relative;
+        box-shadow: 1px 1px 4px white;
+    }
+
+    figure.foto-legenda img{
+        width: 100%;
+        height: 100%;
+    }
+    figure.foto-legenda figcaption{
+        opacity: 0.2;
+        position:absolute;
+        top:0px;
+        background-color: rgba(0,0,0,0.4);
+        color: #ffffff;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        transition: opacity 0.5s ;
+    }
+
+    figure.foto-legenda:hover figcaption{
+        opacity: 0.8;
+    }
+
+    h1 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 200px;
+        color: rgba(255, 255, 255, 0.842);
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 0;
+        
+    }
+
+    h2 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 100px;
+        color:  rgba(255, 255, 255, 0.842);
+        text-align: center;
+        margin-top: 0;
+        padding-top: 490px;
+        margin-bottom: 0;
+        
+    }
+
+    .km-sidebar {
+        width: 100px;
+        height: auto;
+        background: #222;
+        opacity: 0.8;
+        background-attachment: scroll;
+        position: fixed;
+        float: left;
+        margin-top: 0;
+        margin-right: 0;
+        padding-top: 10% ;
+        padding-bottom: 100%;
+    }
+
+ 
+
+    /* Add a left margin to the "page content" that matches the width of the sidebar (100px) */
+    #main {
+        margin-left: 100px;
+
+    }
+
+  /* Remove margins from "page content" on small screens */
+
+  @media only screen and (max-width: 600px) {
+    #main {
+      margin-left: 0;
+    }
+  }
+
