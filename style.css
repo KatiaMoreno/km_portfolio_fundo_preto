@@ -6,48 +6,78 @@
         text-align: center;
     }
 
-    .km-black{
+    body.km-black{
         background-color: black;
         margin: auto;
     }
 
-    .km-header{
-        background-image: url("images/katia-sem-rugas.JPG");
-        background-repeat: no-repeat;
-        background-position: right top;
-        background-attachment: scroll;
-        height: 645px;
-    }
-
-   #btn_scroll_down{ /*deixa o btn transparente*/
-        background-color: Transparent;
-        background-repeat:no-repeat;
-        border: none;
-        cursor:pointer;
-        outline:none;
+/*MENU-START*/
+    nav.km-sidebar {
+        width: 100px;
+        background: #222;
+        opacity: 0.8;
+        position: fixed;
+        padding-top: 10% ;
+        padding-bottom: 100%;
+        font-size: 60%;
+      
    }
 
-    .scroll_down:before { /*triangulo no backgroud das fotos*/
-        width: 100%;
+    nav.km-sidebar hr{
+        width: 50%;
+    }
+
+    nav.km-sidebar a:link, a:visited {
+        background-color: transparent;
+        color: #ffffff;
+        padding: 14px 25px;
+        text-align: center;
+        text-decoration: none;
         display: inline-block;
-        content: '';
-        height: 46px;
-        background: rgba(0, 0, 0, 0.055);
-        background-image: url('images/scroll_down.png');
+        cursor:pointer;     
+
+      }
+      
+    nav.km-sidebar a:hover, a:active {
+        background-color: transparent;
+        font-size: 150%;
+      }
+
+      
+/*MENU-END*/
+
+
+/*MAIN-START*/
+
+   /* Add a left margin to the "page content" that matches the width of the sidebar (100px) */
+   #main {
+    margin-left: 100px;
+
+    }
+
+    /* Remove margins from "page content" on small screens */
+
+    @media only screen and (max-width: 600px) {
+        #main { 
+            margin-left: 0;
+            }
+    }
+
+/*MAIN-END*/
+
+
+    header.km-header{
+        background-image: url("images/katia-sem-rugas.JPG");
         background-repeat: no-repeat;
-        background-position: center;
-        cursor: pointer;
-    }
-
-
-    .scroll_down_p{ /*triangulo no backgroud das fotos*/
-        margin-top: -73px;
-        margin-bottom: 68px;
-        color:rgba(255, 255, 255, 0.295);
-        top: 10px;
+        background-position: right;
+        background-attachment:scroll;
+        height: 728px;
+        padding-top: 0px;
        
+
     }
 
+  
     figure{
         margin:unset;
     }
@@ -79,9 +109,9 @@
         opacity: 0.8;
     }
 
-    h1 {
+    figure.foto-legenda h1 {
         font-family: "Montserrat", sans-serif;
-        font-size: 200px;
+        font-size: 13vw; /*200px*/
         color: rgba(255, 255, 255, 0.842);
         text-align: center;
         margin-top: 0;
@@ -91,7 +121,7 @@
 
     h2 {
         font-family: "Montserrat", sans-serif;
-        font-size: 100px;
+        font-size: 7vw; /*100px*/
         color:  rgba(255, 255, 255, 0.842);
         text-align: center;
         margin-top: 0;
@@ -100,33 +130,76 @@
         
     }
 
-    .km-sidebar {
-        width: 100px;
-        height: auto;
-        background: #222;
-        opacity: 0.8;
-        background-attachment: scroll;
-        position: fixed;
-        float: left;
+    button#btn_scroll_down{ /*deixa o btn transparente*/
+        background-color: Transparent;
+        background-repeat:no-repeat;
+        border: none;
+        cursor:pointer;
+        outline:none;
+        padding-top: 36px;
+   }
+
+    div.scroll_down:before { /*triangulo no backgroud das fotos*/
+        width: 100%;
+        display: inline-block;
+        content: '';
+        height: 46px;
+        background: rgba(0, 0, 0, 0.055);
+        background-image: url('images/scroll_down.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+
+
+    p.scroll_down_p{ /*triangulo no backgroud das fotos*/
+        margin-top: -73px;
+        margin-bottom: 68px;
+        color:rgba(255, 255, 255, 0.295);
+        top: 10px;
+       
+    }
+
+    /*SECTION*/
+
+    section{
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+
+    section h1.titulo {
+        font-family: "Montserrat", sans-serif;
+        font-size: 3vw; /**/
+        color: rgba(255, 255, 255, 0.842);
+        text-align: center;
         margin-top: 0;
-        margin-right: 0;
-        padding-top: 10% ;
-        padding-bottom: 100%;
+        margin-bottom: 0;
+        
     }
 
- 
-
-    /* Add a left margin to the "page content" that matches the width of the sidebar (100px) */
-    #main {
-        margin-left: 100px;
-
+    section p{
+        text-align: justify;
+        color: rgba(255, 255, 255, 0.842);
+        font-family: "Montserrat", sans-serif;
     }
 
-  /* Remove margins from "page content" on small screens */
 
-  @media only screen and (max-width: 600px) {
-    #main {
-      margin-left: 0;
+
+     /*FOOTER*/
+    footer{
+        margin-left: 18vw;
+        margin-right: 10vw;
     }
-  }
+    
+    footer h1.titulo {
+        font-family: "Montserrat", sans-serif;
+        font-size: 3vw; /**/
+        color: rgba(255, 255, 255, 0.842);
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 0;
+        
+    }
+    
 
+   
